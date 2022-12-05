@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Ambiental</title>
+   
+</head>
+<body color text="#000000" scroll="auto" cz-shortcut-listen="true">
+    <table width="1024" border="0" cellpadding="0" cellspacing="0" align="center"></table>
+    <tbody>
+        <tr>
+            <td colspan="2" height="155" style="background-repeat: no-repeat; background-image:  URL('imagens/cabecalho.jpg'); background-size: 1024px;" align="top">
+                &nbsp;&nbsp;
+            </td>
+
+        <tr>
+</tr>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Licenciamento Ambiental</title>
+    <link rel="stylesheet" href="css/jq.css" type="text/css" media="print, projection, screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="print, projection, screen">
+    <link rel="stylesheet" href="css/javascript.css" type="text/css">
+    <link rel="stylesheet" href="css/demos.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.ui.all.css" type="text/css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.core.js"></script>
+    <script src="js/jquery.widget.js"></script>
+    <script src="js/jquery.mouse.js"></script>
+    <script src="js/jquery.position.js"></script>
+    <script src="js/jquery.button.js"></script>
+    <script src="js/jquery.dialog.js"></script>
+    <script src="js/funcDiversos.js"></script>
+    <script src="js/funcDados.js"></script>
+    <script>
+        function Submeter(pag) {
+            if (pag == 1) {
+                if (document.calcAmbiental.qde.value != "") {
+                    PesqEnergia(document.calcAmbiental)
+                } else {
+                    alert("Informe a quantidade de pessoa(s)...")
+                }
+            } else if (pag == 2) {
+                if (document.calcAmbiental.qde.value != "") {
+                    PesqAgua(document.calcAmbiental)
+                } else {
+                    alert("Informe a quantidade de pessoa(s)...")
+                }
+            }
+            else if (pag == 3) {
+                if (document.calcAmbiental.qde.value != "") {
+                    PesqGas(document.calcAmbiental)
+                } else {
+                    alert("Informe a quantidade de pessoa(s)...")
+                }
+            }
+            else if (pag == 4) {
+                if (document.calcAmbiental.qde.value != "") {
+                    PesqPapel(document.calcAmbiental)
+                } else {
+                    alert("Informe a quantidade de pessoa(s)...")
+                }
+            }
+            else if (pag == 5) {
+                PesqResiduos(document.calcAmbiental)
+            }
+        }
+    </script>
+        </head><body marginwidth="10">
+            <form name="calcAmbiental">
+                <input type="hidden" name="tDados" vaelue="">
+                <table width="980" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tbody><tr>
+                        <td>
+                            <table width="1005" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tbody><tr align="left">
+                                    <td colspan="6">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;" color="#2E8B57"><b>QUANTAS PESSOAS MORAM EM SUA RESIDÊNCIA, INCLUINDO VOCÊ?</b></font><b>
+                                            <input type="text" name="qde" size="5" value="1"><br><br>
+                                            </b></td>
+                                            </tr>    
+                                            <tr align="center">
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(1)">
+                                                        <img src="img/energia1.png" border="0" width="140" height="69"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>ENERGIA ELÉTRICA</b></font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(2)">
+                                                        <img src="img/image-agua.png" border="0" width="120" height="69"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>CONSUMO DE ÁGUA</b></font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(3)">
+                                                        <img src="img/gas3.png" border="0" width="70" height="69"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>GÁS RESIDENCIAL</b></font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(4)">
+                                                        <img src="img/image-papel.png" border="0" width="100" height="69"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>PAPEL (A4, carta e ofício)</b></font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(5)">
+                                                        <img src="img/resíduos-sólidos.png" border="0" width="120" height="69"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>RESÍDUOS SÓLIDOS (LIXO)</b></font>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr align="center">
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(1)">
+                                                        <input type="text" name="energia" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(2)">
+                                                        <input type="text" name="agua" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(3)">
+                                                        <input type="text" name="gas" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(4)">
+                                                        <input type="text" name="papel" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / ano</font>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(5)">
+                                                        <input type="text" name="residuos" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr align="center">
+                                                <td colspan="6">&nbsp;</td>
+                                            </tr>    
+                                                <td colspan="6"><br>
+                                                    <table width="990" border="0" cellpadding="0" cellspacing="5" align="center">
+                                                        <tbody><tr>
+                                                            <td valign="bottom" width="380" align="right"><img src="img/mundo-sustentavel.png" width="110" height="95"><input type="text" name="pegada" size="8" readonly="true" style="font-size: 80px;font-weight: bold;width: 250px;text-align:center;"></td>
+                                                            <td valign="bottom" width="200" align="left"><b><font style="font-family: Arial, Helvetica, sans-serif;" color="#006400">Total de<br>Emissões por ano<br>(toneladas de CO2e).</font></b></td>
+                                                            <td valign="bottom" width="100" align="center"><img src="img/arvore.png" width="70" height="95"></td>
+                                                            <td>
+                                                                
+                                                                <input type="text" name="arvores" size="8" readonly="true" style="font-size: 80px;font-weight: bold;;width: 130px;text-align:center;">
+                                                            </td>
+                                                            <td valign="bottom">
+                                                                <b><font style="font-family: Arial, Helvetica, sans-serif;" color="#006400">Número de árvores<br>que serão plantadas<br>para conpensar<br>essas poluições.</font></b>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>    
+                                            </tr>   
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </form>
+        
+    
+    </body></html>
+    </tbody>
+</body>
+</html>
