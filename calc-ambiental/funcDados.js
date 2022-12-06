@@ -208,3 +208,171 @@ function PesqResiduos(obj) {
     }
     return resp
 }
+
+function PesqEletronicos(obj) {
+    var resp = false;
+    if (!resp) {
+        $("form").append(String.Format("<div id='dialog-confirm' title='{0}'>"
+                + "<table border='0' cellpadding='2' cellspaceing='0'>"
+                + "   <tr>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/eletronicos.png' width='80' height='50'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         Quantos eletrônicos você compra por ano (em kg) ? " + "<br><br>"
+                + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/eletronicos.png' width='80' height='50'>"
+                + "      </td>"
+                + "</table>"
+                + "<center><b>OBS:</b> Caso não saiba, considere a média mensal de um brasileiro (30kg por mês)"
+                + "</div>", "Calculo do Consumo de Eletrônicos"));
+        setTimeout(function () {
+            var dados = $("#fDados"),
+                    allFields = $([]).add(dados);
+            $("#dialog-confirm").dialog({
+                resizable: false,
+                modal: true,
+                draggable: false,
+                width: 360,
+                buttons: {
+                    OK: function () {
+                        $(this).dialog("close");
+                        document.calcAmbiental.tDados.value = CalcEletronicos(dados.val())
+                        document.calcAmbiental.eletronicos.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
+                        PegadaCarbono()
+                        resp = true;
+                    },
+                }
+            });
+        }, 40)
+    }
+    return resp
+}
+
+function PesqPlastico(obj) {
+    var resp = false;
+    if (!resp) {
+        $("form").append(String.Format("<div id='dialog-confirm' title='{0}'>"
+                + "<table border='0' cellpadding='2' cellspaceing='0'>"
+                + "   <tr>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/plastic.png' width='80' height='50'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         Qual a quantidade média de plástico gerado por mês (em kg) ? " + "<br><br>"
+                + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/plastic.png' width='80' height='50'>"
+                + "      </td>"
+                + "</table>"
+                + "<center><b>OBS:</b> Caso não saiba, considere a média mensal de um brasileiro (30kg por mês)"
+                + "</div>", "Calculo do Consumo de Plásticos"));
+        setTimeout(function () {
+            var dados = $("#fDados"),
+                    allFields = $([]).add(dados);
+            $("#dialog-confirm").dialog({
+                resizable: false,
+                modal: true,
+                draggable: false,
+                width: 360,
+                buttons: {
+                    OK: function () {
+                        $(this).dialog("close");
+                        document.calcAmbiental.tDados.value = CalcPlastico(dados.val())
+                        document.calcAmbiental.plastico.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
+                        PegadaCarbono()
+                        resp = true;
+                    },
+                }
+            });
+        }, 40)
+    }
+    return resp
+}
+
+function PesqVidro(obj) {
+    var resp = false;
+    if (!resp) {
+        $("form").append(String.Format("<div id='dialog-confirm' title='{0}'>"
+                + "<table border='0' cellpadding='2' cellspaceing='0'>"
+                + "   <tr>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/vidro.png' width='80' height='50'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         Qual a quantidade média de vidro gerado por mês (em kg) ? " + "<br><br>"
+                + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/vidro.png' width='80' height='50'>"
+                + "      </td>"
+                + "</table>"
+                + "<center><b>OBS:</b> Caso não saiba, considere a média mensal de um brasileiro (30kg por mês)"
+                + "</div>", "Calculo do Consumo de Vidro"));
+        setTimeout(function () {
+            var dados = $("#fDados"),
+                    allFields = $([]).add(dados);
+            $("#dialog-confirm").dialog({
+                resizable: false,
+                modal: true,
+                draggable: false,
+                width: 360,
+                buttons: {
+                    OK: function () {
+                        $(this).dialog("close");
+                        document.calcAmbiental.tDados.value = CalcVidro(dados.val())
+                        document.calcAmbiental.vidro.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
+                        PegadaCarbono()
+                        resp = true;
+                    },
+                }
+            });
+        }, 40)
+    }
+    return resp
+}
+
+function PesqAluminio(obj) {
+    var resp = false;
+    if (!resp) {
+        $("form").append(String.Format("<div id='dialog-confirm' title='{0}'>"
+                + "<table border='0' cellpadding='2' cellspaceing='0'>"
+                + "   <tr>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/aluminio.png' width='80' height='50'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         Qual a quantidade média de aluminio gerado por mês (em kg) ? " + "<br><br>"
+                + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
+                + "      </td>"
+                + "      <td align='center' valign='middle'>"
+                + "         <img src='img/aluminio.png' width='80' height='50'>"
+                + "      </td>"
+                + "</table>"
+                + "<center><b>OBS:</b> Caso não saiba, considere a média mensal de um brasileiro (30kg por mês)"
+                + "</div>", "Calculo do Consumo de Aluminio"));
+        setTimeout(function () {
+            var dados = $("#fDados"),
+                    allFields = $([]).add(dados);
+            $("#dialog-confirm").dialog({
+                resizable: false,
+                modal: true,
+                draggable: false,
+                width: 360,
+                buttons: {
+                    OK: function () {
+                        $(this).dialog("close");
+                        document.calcAmbiental.tDados.value = CalcAluminio(dados.val())
+                        document.calcAmbiental.aluminio.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
+                        PegadaCarbono()
+                        resp = true;
+                    },
+                }
+            });
+        }, 40)
+    }
+    return resp
+}
