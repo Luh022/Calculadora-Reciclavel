@@ -308,21 +308,40 @@ function CalcResiduos(valor) {
     return (parseFloat(valor) * indice)
 }
 
-function PegadaCarbono() {
+function CalcEletronicos(valor) {
+    indice = 10
+    return (parseFloat(valor) * indice)
+}
+
+function CalcPlastico(valor) {
+    indice = 3.2044
+    return (parseFloat(valor) * indice)
+}
+
+function CalcVidro(valor) {
+    indice = 3.2042
+    return (parseFloat(valor) * indice)
+}
+
+function CalcAluminio(valor) {
+    indice = 3.2140
+    return (parseFloat(valor) * indice)
+}
+
+function MundoCarbono() {
     pegada = (
         ((parseFloat(document.calcAmbiental.energia.value.replace(",", "."))+
         parseFloat(document.calcAmbiental.agua.value.replace(",", "."))+
         parseFloat(document.calcAmbiental.gas.value.replace(",", ".")))*12)+
         parseFloat(document.calcAmbiental.papel.value.replace(",", "."))+
         ((parseFloat(document.calcAmbiental.residuos.value.replace(",", "."))+
-        parseFloat(document.calcAmbiental.carros.value.replace(",", "."))+
-        parseFloat(document.calcAmbiental.motos.value.replace(",", "."))+
-        parseFloat(document.calcAmbiental.onibus.value.replace(",", "."))+
-        parseFloat(document.calcAmbiental.metro.value.replace(",", ".")))*12)+
-        parseFloat(document.calcAmbiental.aviao.value.replace(",", "."))
+        parseFloat(document.calcAmbiental.eletronicos.value.replace(",", "."))+
+        parseFloat(document.calcAmbiental.plastico.value.replace(",", "."))+
+        parseFloat(document.calcAmbiental.vidro.value.replace(",", "."))+
+        parseFloat(document.calcAmbiental.aluminio.value.replace(",", ".")))*12)
     ) / 1000
-    arvores = pegada * 7.14
-    document.calcAmbiental.pegada.value = FormatDec(pegada,1).replace(".", ",")
+    arvores = mundo * 7.14
+    document.calcAmbiental.mundo.value = FormatDec(pegada,1).replace(".", ",")
     document.calcAmbiental.arvores.value = FormatDec(arvores,0) 
 }
 
