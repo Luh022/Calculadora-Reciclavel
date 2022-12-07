@@ -53,6 +53,7 @@
                     alert("Informe a quantidade de pessoa(s)...")
                 }
             }
+        }
             else if (pag == 5) {
                 PesqResiduos(document.calcAmbiental)
             }
@@ -68,7 +69,11 @@
             else if (pag == 9) {
                 PesqAluminio(document.calcAmbiental)
             }
+            else if (pag == 10) {
+                PesqMetal(document.calcAmbiental)
+            }
         }
+    
     </script>
         </head><body marginwidth="10">
             <form name="calcAmbiental">
@@ -77,7 +82,7 @@
                     <tbody><tr>
                         <td>
                             <table width="1005" border="0" cellpadding="0" cellspacing="0" align="center">
-                                <tbody><tr align="left">
+                                <tbody><tr align="center">
                                     <td colspan="6">
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <font size="2" style="font-family: Arial, Helvetica, sans-serif;" color="#2E8B57"><b>QUANTAS PESSOAS MORAM EM SUA RESIDÊNCIA, INCLUINDO VOCÊ?</b></font><b>
@@ -115,32 +120,11 @@
                                                         <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>RESÍDUOS SÓLIDOS (LIXO)</b></font>
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <a href="#" style="text-decoration:none" onclick="Submeter(6)">
-                                                        <img src="img/eletronico.png" border="0" width="120" height="69"><br>
-                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Eletrônico</b></font>
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" style="text-decoration:none" onclick="Submeter(7)">
-                                                        <img src="img/plastic.png" border="0" width="120" height="69"><br>
-                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Plástico</b></font>
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" style="text-decoration:none" onclick="Submeter(8)">
-                                                        <img src="img/vidro.png" border="0" width="120" height="69"><br>
-                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Vidro</b></font>
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" style="text-decoration:none" onclick="Submeter(9)">
-                                                        <img src="img/aluminio.png" border="0" width="120" height="69"><br>
-                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Alumínio</b></font>
-                                                    </a>
-                                                </td>
+                                                
                                             </tr>
                                             <tr align="center">
+                                                <td colspan="6">&nbsp;</td>
+                                            </tr>
                                                 <td>
                                                     <a href="#" style="text-decoration:none" onclick="Submeter(1)">
                                                         <input type="text" name="energia" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
@@ -173,36 +157,80 @@
                                                         <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
                                                     </a>
                                                 </td>
+                                            <td>
+                                            <tr align="center">
+                                                <td colspan="6">&nbsp;</td>
+                                            </tr>  
+                                            <tr align="center">
+                                                <a href="#" style="text-decoration:none"  onclick="Submeter(6)">
+                                                    <img src="img/eletronico.png" border="0" width="120" height="69"><br>
+                                                    <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Eletrônico</b></font>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" style="text-decoration:none" onclick="Submeter(7)">
+                                                    <img src="img/plastic.png" border="0" width="110" height="69"><br>
+                                                    <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Plástico</b></font>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" style="text-decoration:none" onclick="Submeter(8)">
+                                                    <img src="img/vidro.png" border="0" width="110" height="69"><br>
+                                                    <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Vidro</b></font>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" style="text-decoration:none" onclick="Submeter(9)">
+                                                    <img src="img/aluminio.png" border="0" width="110" height="69"><br>
+                                                    <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Alumínio</b></font>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" style="text-decoration:none" onclick="Submeter(10)">
+                                                    <img src="img/metal.png" border="0" width="110" height="69"><br>
+                                                    <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><b>Metal</b></font>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                            <tr align="center">
+                                                <td colspan="6">&nbsp;</td>
+                                            </tr>
                                                 <td>
                                                     <a href="#" style="text-decoration:none" onclick="Submeter(6)">
-                                                        <input type="text" name="agua" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <input type="text" name="eletronico" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
                                                         
                                                         <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / ano</font>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="#" style="text-decoration:none" onclick="Submeter(7)">
-                                                        <input type="text" name="gas" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <input type="text" name="plastico" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
                                                         <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="#" style="text-decoration:none" onclick="Submeter(8)">
-                                                        <input type="text" name="papel" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <input type="text" name="vidro" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
                                                         <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / ano</font>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="#" style="text-decoration:none" onclick="Submeter(9)">
-                                                        <input type="text" name="residuos" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <input type="text" name="aluminio" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
                                                         <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
                                                     </a>
                                                 </td>
-                                            </tr>
-                                            <tr align="center">
-                                                <td colspan="6">&nbsp;</td>
-                                            </tr>    
-                                                <td colspan="6"><br>
+                                                <td>
+                                                    <a href="#" style="text-decoration:none" onclick="Submeter(10)">
+                                                        <input type="text" name="metal" size="8" value="0" readonly="true" style="font-size: 16px;font-weight: bold;"><br>
+                                                        <font size="2" style="font-family: Arial, Helvetica, sans-serif;">Emissão KgCO2 / mês</font>
+                                                    </a>
+                                                </td>
+                                                <tr align="center">
+                                                    <td colspan="6">&nbsp;</td>
+                                                </tr>    
+                                                <tr align="center">
+                                                    <td colspan="6"><br>
                                                     <table width="990" border="0" cellpadding="0" cellspacing="5" align="center">
                                                         <tbody><tr>
                                                             <td valign="bottom" width="380" align="right"><img src="img/mundo-sustentavel.png" width="110" height="95"><input type="text" name="mundo" size="8" readonly="true" style="font-size: 80px;font-weight: bold;width: 250px;text-align:center;"></td>
