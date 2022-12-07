@@ -5,14 +5,14 @@ function PesqEnergia(obj) {
                 + "<table border='0' cellpadding='2' cellspaceing='0'>"
                 + "   <tr>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/01.png' width='80' height='50'>"
+                + "         <img src='img/energia1.png' width='80' height='50'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
                 + "         Qual o seu consumo médio de energia por mês (em kWh) ? " + "<br><br>"
                 + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/01.png' width='80' height='50'>"
+                + "         <img src='img/energia1.png' width='80' height='50'>"
                 + "      </td>"
                 + "</table>"
                 + "</div>", "Calculo da Energia Elétrica"));
@@ -29,7 +29,7 @@ function PesqEnergia(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcEnergia(dados.val(), document.calcAmbiental.qde.value)
                         document.calcAmbiental.energia.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -46,14 +46,14 @@ function PesqAgua(obj) {
                 + "<table border='0' cellpadding='2' cellspaceing='0'>"
                 + "   <tr>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/02.png' width='80' height='50'>"
+                + "         <img src='img/image-agua.png' width='80' height='50'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
                 + "         Qual o seu consumo médio de água por mês (em m3) ? " + "<br><br>"
                 + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/02.png' width='80' height='50'>"
+                + "         <img src='img/image-agua.png' width='80' height='50'>"
                 + "      </td>"
                 + "</table>"
                 + "</div>", "Calculo do Consumo de Água"));
@@ -70,7 +70,7 @@ function PesqAgua(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcAgua(dados.val(), document.calcAmbiental.qde.value)
                         document.calcAmbiental.agua.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -87,7 +87,7 @@ function PesqGas(obj) {
                 + "<table border='0' cellpadding='2' cellspaceing='0'>"
                 + "   <tr>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/03.png' width='80' height='50'>"
+                + "         <img src='img/gas3.png' width='80' height='50'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
                 + "         <select id='fTipo' name = 'fTipo'  onfocus='EntrarCampo(this)' onkeypress='autoTab(this, event)'> "
@@ -98,7 +98,7 @@ function PesqGas(obj) {
                 + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/03.png' width='80' height='50'>"
+                + "         <img src='img/gas3.png' width='80' height='50'>"
                 + "      </td>"
                 + "</table>"
                 + "</div>", "Calculo do Consumo de Gás"));
@@ -116,7 +116,7 @@ function PesqGas(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcGas(dados.val(),tipo.val(), document.calcAmbiental.qde.value)
                         document.calcAmbiental.gas.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -133,14 +133,14 @@ function PesqPapel(obj) {
                 + "<table border='0' cellpadding='2' cellspaceing='0'>"
                 + "   <tr>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/04.png' width='80' height='50'>"
+                + "         <img src='img/image-papel.png' width='80' height='50'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
                 + "         Quantas resmas de papel (500 folhas) você utiliza por ano ? " + "<br><br>"
                 + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/04.png' width='80' height='50'>"
+                + "         <img src='img/image-papel.png' width='80' height='50'>"
                 + "      </td>"
                 + "</table>"
                 + "</div>", "Calculo do Consumo de Papel"));
@@ -157,7 +157,7 @@ function PesqPapel(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcPapel(dados.val(), document.calcAmbiental.qde.value)
                         document.calcAmbiental.papel.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -174,14 +174,14 @@ function PesqResiduos(obj) {
                 + "<table border='0' cellpadding='2' cellspaceing='0'>"
                 + "   <tr>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/05.png' width='80' height='50'>"
+                + "         <img src='img/resíduos-sólidos.png' width='80' height='50'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
                 + "         Qual a quantidade média de lixo gerado por mês (em kg) ? " + "<br><br>"
                 + "         <Input type='text' id='fDados' name='fDados' onFocus='EntrarCampo(this)' onBlur='SairCampo(this)' class='caixa_form' value = '0' maxlength='10' size='10'>"
                 + "      </td>"
                 + "      <td align='center' valign='middle'>"
-                + "         <img src='imagens/05.png' width='80' height='50'>"
+                + "         <img src='img/resíduos-sólidos.png' width='80' height='50'>"
                 + "      </td>"
                 + "</table>"
                 + "<center><b>OBS:</b> Caso não saiba, considere a média mensal de um brasileiro (30kg por mês)"
@@ -199,7 +199,7 @@ function PesqResiduos(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcResiduos(dados.val())
                         document.calcAmbiental.residuos.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -241,7 +241,7 @@ function PesqEletronicos(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcEletronicos(dados.val())
                         document.calcAmbiental.eletronicos.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -283,7 +283,7 @@ function PesqPlastico(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcPlastico(dados.val())
                         document.calcAmbiental.plastico.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -325,7 +325,7 @@ function PesqVidro(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcVidro(dados.val())
                         document.calcAmbiental.vidro.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
@@ -367,7 +367,7 @@ function PesqAluminio(obj) {
                         $(this).dialog("close");
                         document.calcAmbiental.tDados.value = CalcAluminio(dados.val())
                         document.calcAmbiental.aluminio.value = FormatDec(document.calcAmbiental.tDados.value, 1).replace(".", ",")
-                        PegadaCarbono()
+                        MundoCarbono()
                         resp = true;
                     },
                 }
