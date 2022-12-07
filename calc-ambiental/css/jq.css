@@ -2,6 +2,7 @@ body,div,h1{
     font-family:'trebuchet ms', verdana, arial;
     margin:0;
     padding:0;
+    text-align: center;
 }
 
 body{
@@ -9,6 +10,7 @@ body{
     font-size:small;
     margin:0;
     padding:0;
+    text-align: center;
 }
 
 h1{
