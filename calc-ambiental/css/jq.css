@@ -11,6 +11,7 @@ body{
     margin:0;
     padding:0;
     text-align: center;
+    position: relative;
 }
 
 h1{
@@ -41,16 +42,6 @@ pre.normal{
     border:none;
     border-left-width:0;
     overflow-x:auto;
-}
-
-#logo{
-    background:url(images/jq.png);
-    display:block;
-    float:right;
-    height:31px;
-    margin-right:10px;
-    margin-top:10px;
-    width:110px;
 }
 
 #main{
