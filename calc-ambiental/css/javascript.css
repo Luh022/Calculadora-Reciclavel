@@ -1,7 +1,7 @@
-.javascript .mlcom       { color: #4040c2; }
-.javascript .com           { color: green; }
-.javascript .regexp     { color: maroon; }
-.javascript .string     { color: teal; }
-.javascript .keywords { color: navy; font-weight: bold; }
-.javascript .global     { color: blue; }
-.javascript .numbers   { color: red; }
+.javascript .mlcom       { color: #000; }
+.javascript .com           { color: #000; }
+.javascript .regexp     { color: #000; }
+.javascript .string     { color: #000; }
+.javascript .keywords { color: #000; font-weight: bold; }
+.javascript .global     { color: #000; }
+.javascript .numbers   { color: #000; }

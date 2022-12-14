@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
 a:link {
 	text-decoration: none;
 }
@@ -14,7 +16,8 @@ a:active {
 /* tables */
 table.tablesorter {
 	font-family:arial;
-	background-color: #CDCDCD; 		
+	background: #f4f4f4; 
+	color: #000;		
 	margin:10px 0pt 15px;
 	font-size: 10pt;
 	width: 100%;
@@ -22,7 +25,7 @@ table.tablesorter {
 }
 
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	background-color: #e6EEEE;			
+	background: #f4f4f4;			
 	border: 0px solid #FFF;				
 	font-size: 8pt;
 	padding: 4px;
@@ -36,14 +39,14 @@ table.tablesorter thead tr .header{
 }
 
 table.tablesorter tbody td {
-	color: #3D3D3D; 					
+	color: #000; 					
 	padding: 2px;
-	background-color: #FFF; 			
+	background: #f4f4f4; 			
 	vertical-align: top;
 	border: 0px solid #FFF;			
 }
 table.tablesorter tbody tr.odd td {
-	background-color:#F0F0F6;           
+	background:#f4f4f4;           
 }
 
 table.tablesorter thead tr .headerSortUp {
@@ -53,5 +56,5 @@ table.tablesorter thead tr .headerSortDown {
 	background-image: url("../imagens/desc.gif");
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-background-color: #8dbdd8; 				
+background: #f4f4f4; 				
 }

@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
 body,div,h1{
-    font-family:'trebuchet ms', verdana, arial;
+    font-family:'Montserrat', sans-serif;
     margin:0;
     padding:0;
     text-align: center;
 }
 
 body{
-    color:#333;
+    color:#000;
+    background: #f4f4f4;
     font-size:small;
     margin:0;
     padding:0;
@@ -15,23 +18,37 @@ body{
 }
 
 h1{
-    font-size:large;
+    color: #1a5455;
+    background: #f4f4f4;
+    font-size: 2rem;;
     font-weight:400;
+    font-family: 'Montserrat', sans-serif;
     margin:0;
+    align: center;
+    line-height: 1.2;
+}
+
+p {
+    color: #000;
+    background: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
 }
 
 h2{
-    color:#333;
+    color:#000;
+    background: #f4f4f4;
     font-size:small;
     font-weight:400;
     margin:0;
 }
 
 pre{
-    background-color:#eee;
+    background:#f4f4f4;
+    color: #000;
     border:1px solid #ddd;
     border-left-width:5px;
-    color:#333;
     font-size:small;
     overflow-x:auto;
     padding:15px;
@@ -54,9 +71,9 @@ pre.normal{
 }
 
 #busy{
-    background-color:#e95555;
+    background:#f4f4f4;
     border:1px ridge #ccc;
-    color:#eee;
+    color:#000;
     display:none;
     padding:3px;
     position:absolute;
@@ -74,7 +91,8 @@ code{
 }
 
 ul{
-    color:#333;
+    color:#000;
+    background: #f4f4f4;
     list-style:square;
 }
 
@@ -85,8 +103,9 @@ ul{
 }
 
 #banner *{
-    color:#232121;
-    font-family:Georgia, Palatino, Times New Roman;
+    color:#000;
+    background: #f4f4f4;
+    font-family:'Montserrat', sans-serif;
     font-size:30px;
     font-style:normal;
     font-weight:400;
@@ -100,7 +119,8 @@ ul{
 }
 
 #banner h1 em{
-    color:#6cf;
+    color:#000;
+    background: #f4f4f4;
 }
 
 #banner h2{
@@ -162,8 +182,8 @@ table#options *{
 
 p.tip em {
     padding: 2px; 
-    background-color: #6cf; 
-    color: #FFF;
+    background: #f4f4f4; 
+    color: #000;
 }
 
 div.digg {
